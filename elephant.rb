@@ -52,4 +52,4 @@ while @item_number < 10
 end
 
 image_merge
-# tweet
+tweet
