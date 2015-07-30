@@ -17,7 +17,6 @@ def image_merge
   output.draw "text " "0,10 " "'Photo Credit: #{@image_copyright}' "
   output.format 'jpeg'
   output.write 'output.jpg'
-
 end
 
 def fetch_image
