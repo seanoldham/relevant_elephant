@@ -34,10 +34,10 @@ def tweet
 end
 
 @item_number = 0
-nytimes_url = 'http://api.nytimes.com/svc/topstories/v1/home.json?api-key=' + API_KEY
+nyt_url = 'http://api.nytimes.com/svc/topstories/v1/home.json?api-key=' + API_KEY
 
 while @item_number < 10
-  @response = HTTParty.get(nytimes_url)['results']
+  @response = HTTParty.get(nyt_url)['results']
   fetch_image
   if @item.to_s != ""
     @image_url = @item['url'].gsub(/(thumb).*$/, "superJumbo.jpg")
@@ -51,5 +51,6 @@ while @item_number < 10
   end
 end
 
+puts @image_title
 image_merge
-# tweet
+tweet
