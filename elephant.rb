@@ -6,8 +6,8 @@ require 'httparty'
 require 'twitter'
 
 def image_merge
-  elephant = MiniMagick::Image.new('elephant.png')
-  bg = MiniMagick::Image.new(@image_url)
+  elephant = MiniMagick::Image.open('elephant.png')
+  bg = MiniMagick::Image.open(@image_url)
   elephant_height = (bg.height / 1.5)
   elephant_width = (bg.width / 1.5)
   elephant.resize "#{elephant_height}x#{elephant_width}"
