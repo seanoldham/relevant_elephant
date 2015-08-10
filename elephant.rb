@@ -1,4 +1,4 @@
-load 'secrets.rb'
+load '~/relevant_elephant/secrets.rb'
 require 'rubygems'
 require 'mini_magick'
 require 'json'
