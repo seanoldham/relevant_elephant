@@ -18,6 +18,6 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 12.hours do
+every 2.hours do
   command "cd ~/relevant_elephant && ruby elephant.rb"
 end

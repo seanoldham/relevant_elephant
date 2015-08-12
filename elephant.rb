@@ -33,17 +33,17 @@ def tweet
   client.update_with_media(@image_title, File.new("./output.jpg"))
 end
 
-@item_number = 0
+@item_number = rand(0..18)
 nyt_url = 'http://api.nytimes.com/svc/topstories/v1/home.json?api-key=' + API_KEY
 
-while @item_number < 10
+while @item_number < 20
   @response = HTTParty.get(nyt_url)['results']
   fetch_image
   if @item.to_s != ""
     @image_url = @item['url'].gsub(/(thumb).*$/, "superJumbo.jpg")
     @image_copyright = @item['copyright'].to_s
     @image_title = @response[@item_number]['title'] + " With Elephants"
-    @item_number = 10
+    @item_number = 20
   else
     @item_number += 1
     puts "No images found for top story."
