@@ -1,5 +1,6 @@
 # relevant_elephant
 ![](elephant.png)
+
 Today's top news stories, with elephants!
 
 ## What You'll Need
